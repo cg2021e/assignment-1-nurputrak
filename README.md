@@ -4,7 +4,7 @@
 
 I want to draw a eraser
 
-(https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser1.png)
-(https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser2.png)
-(https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser3.png)
-(https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser4.png)
+![](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser1.png)
+![](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser2.png)
+![](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser3.png)
+![](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser4.png)

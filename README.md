@@ -14,7 +14,7 @@ I want to draw a eraser
 |![top front](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser4.png)|![top right](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser1.png)|![top left](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser2.png) | ![top rear](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser3.png) |
 
 # Assignment 2
-From the object or image that I had from the previous task, in this task we were asked to select two of the four perspective images of those objects. So, I choosed the **Top Right** and **Top Front** perspective of the image object. Then from that image or photos we must to illustrated it using webgl in accordance with the following provisions :    
+From the object or image that I had from the previous task, in this task we were asked to select two of the four perspective images of those objects. So, I choosed the **Top Front** and **Top Right** perspective of the image object. Then from that image or photos we must to illustrated it using webgl in accordance with the following provisions :    
 1. The application consists of HTML, JavaScript and CSS (optional) files.  
 2. The application contains only one Canvas.  
 3. The JavaScript application comprises the definition of vertices that embody the shape of the object photographed in the previous assignment: Select two of the four photos.  

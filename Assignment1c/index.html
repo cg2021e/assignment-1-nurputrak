@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eraser 3D</title>
+
+
+    <script src="gl-matrix-min.js"></script>
+    <script defer src="moveandfunc.js"></script>
+    <script defer src="MakeEraser.js"></script>
+    <script defer src="MakeCube.js"></script>
+    <script defer src="mainJsAssignment3.js"></script>
+</head>
+<style>
+    #Canvas{
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+    h3{
+        margin-left: 10px;
+    }
+</style>
+<body>
+    <h3>Name: Nur Putra Khanafi</h3>
+    <h3>NRP : 05111940000020</h3>
+    <div class="preview-container">
+        <!-- <canvas width="640" height="360" class="preview-canvas" id="previewCanvas"> -->
+        <canvas class="preview-canvas" id="Canvas" width="720" height="640" style=" border: 5px solid rgb(130, 133, 134);">
+            Your Browser doesn't support Canvas
+        </canvas>
+        
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div style="text-align: center;">
+        <p>Hold A and D to move the camera.</p>
+        <p>Hold W and S to move the light.</p>
+    </div>
+</body>
+</html>

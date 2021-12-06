@@ -3,7 +3,7 @@
 **Name :** Nur Putra Khanafi <br>
 **NRP  :** 05111940000111
 
-# Assignment 1
+# Assignment 1A
 In this task we are asked to look for objects with the provisions that have been given, namely object whose name starts with E, J, or O (in English). Take the photos of the object from four different perspectives: top right, top left, top rear, top front of the object. So i choose a eraser for the object.
 # Eraser
 
@@ -13,7 +13,7 @@ I want to draw a eraser
 | :---: | :---: | :---: | :---:|
 |![top front](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser4.png)|![top right](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser1.png)|![top left](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser2.png) | ![top rear](https://github.com/cg2021e/assignment-1-nurputrak/blob/main/assets/eraser3.png) |
 
-# Assignment 2
+# Assignment 1B
 From the object or image that I had from the previous task, in this task we were asked to select two of the four perspective images of those objects. So, I choosed the **Top Front** and **Top Right** perspective of the image object. Then from that image or photos we must to illustrated it using webgl in accordance with the following provisions :    
 1. The application consists of HTML, JavaScript and CSS (optional) files.  
 2. The application contains only one Canvas.  
@@ -25,3 +25,16 @@ From the object or image that I had from the previous task, in this task we were
 8. Do not forget to commit and push the changes. 
 
 <a href="https://cg2021e.github.io/assignment-1-nurputrak/" target="_blank">Here the result with speed 0.0020</a>
+
+# Assignment 1C
+Please continue your WebGL application on the same repository with the following specifications: 
+1. Create a 3D definition of the object being photographed in your very first assignment.
+2. Draw the object twice—on the left and on the right half of the canvas—with the two perspectives corresponding to the two photos selected in the previous assignment.
+3. Add a little cube in the center of canvas, right between the two objects.
+4. Set the cube to glow white and become a light source.
+5. Add an ambient effect with an intensity of 0.abc to both objects, where the value of abc is the last three digits of your Student ID plus 200.
+6. Add a diffuse effect to both objects.
+7. Add a plastic specular effect for the left object.
+8. Add a metal specular effect for the object on the right.
+9. Set the cube so that it can be moved upward with the W key-button and downward with the S key-button.
+10. Set the camera to move leftward and rightward linearly (not orbitally) using the A and D key-buttons.

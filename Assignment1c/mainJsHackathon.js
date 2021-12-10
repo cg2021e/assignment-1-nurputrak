@@ -330,12 +330,7 @@ function main() {
   let moveRatio = 0.1;
 
   function render() {
-      world.render();
-
-      world.lightning.position = lerpVec3(world.lightning.position, cubePosition, moveRatio);
-      world.camera.position = lerpVec3(world.camera.position, cameraPosition, moveRatio);
-
-      requestAnimationFrame(render);
+      
   }
   requestAnimationFrame(render);
 }

@@ -282,17 +282,25 @@ class WebGLWorld {
     let canvas = document.getElementById('Canvas'); 
     let gl = canvas.getContext('webgl');
   
-    gl.viewport(0, 120, 720, 720);
+    gl.viewport(0, 0, 720, 720);
   
     // Get Models
     let cubeModel = makeCube();
     let EraserModel = makeEraser();
+    let planeModel = makePlane();   //create plane with rgb 2,0,32 for #020020, 2 nrp three last digit
   
     // Create Cube Object and set some properties
     let cubeObject = new WebGLObject(gl, cubeModel, vertexShaderSource, fragmentShaderSource);
     cubeObject.transform.scale = [0.05, 0.05, 0.05];
     cubeObject.lightning.ambientIntensity = 1.0;
     cubeObject.transform.position = [0, 0.55, 4];
+
+    // Create Plane Object and set some properties
+    let planeObject = new WebGLObject(gl, planeModel, vertexShaderSource, fragmentShaderSource);
+    planeObject.transform.scale = [20, 1, 20]; //scale to 20x20 unit
+    planeObject.lightning.ambientIntensity = 1.0;
+    planeObject.transform.position = [0, -0.5, 3];
+    planeObject.lightning.shininessConstant = 0;
   
     // Create Eraser at left pos
     let EraserLeftObject = new WebGLObject(gl, EraserModel, vertexShaderSource, fragmentShaderSource);
@@ -317,14 +325,15 @@ class WebGLWorld {
     world.lightning.position = cubeObject.transform.position;
   
     world.addObject(cubeObject);
+    world.addObject(planeObject);
     world.addObject(EraserLeftObject);
     world.addObject(EraserRightObject);
   
     world.deploy();
   
-  
     function render() {
         world.render();
+
   
         requestAnimationFrame(render);
     }

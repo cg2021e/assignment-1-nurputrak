@@ -330,6 +330,28 @@ class WebGLWorld {
     world.addObject(EraserRightObject);
   
     world.deploy();
+
+    let isLightUp  = true;
+
+    document.addEventListener("keydown", (event) => {
+        if (event.keyCode === 32){
+
+			isLightUp = !isLightUp;
+            if (isLightUp) {
+                world.lightning.ambientIntensityGlobal = 0.220;
+                world.clearColor = [0.7, 0.8, 0.9, 1];
+                cubeObject.lightning.ambientIntensity = 1.0;
+                planeObject.lightning.ambientIntensity = 1.0;
+                planeObject.lightning.shininessConstant = 0;
+            } else {
+                world.lightning.ambientIntensityGlobal = 0.0;
+                world.clearColor = [0, 0, 0, 1.0];
+                cubeObject.lightning.ambientIntensity = -1.0;
+                planeObject.lightning.ambientIntensity = -1.0;
+                planeObject.lightning.shininessConstant = 200;
+            }
+		}
+    }, false);
   
     function render() {
         world.render();

@@ -331,10 +331,18 @@ class WebGLWorld {
   
     world.deploy();
 
+    // Controller
+    let cubePosition = cubeObject.transform.position;
+    let cameraPosition = world.camera.position;
+    let cubeSpeed = 0.05;
+    let cameraSpeed = 0.05;
+    let moveRatio = 0.1;
+
     let isLightUp  = true;
 
     document.addEventListener("keydown", (event) => {
-        if (event.keyCode === 32){
+        console.log(event)
+        if (event.keyCode === 32){ //key space
 
 			isLightUp = !isLightUp;
             if (isLightUp) {
@@ -342,7 +350,7 @@ class WebGLWorld {
                 world.clearColor = [0.7, 0.8, 0.9, 1];
                 cubeObject.lightning.ambientIntensity = 1.0;
                 planeObject.lightning.ambientIntensity = 1.0;
-                planeObject.lightning.shininessConstant = 0;
+                planeObject.lightning.shininessConstant = 1;
             } else {
                 world.lightning.ambientIntensityGlobal = 0.0;
                 world.clearColor = [0, 0, 0, 1.0];
@@ -351,10 +359,24 @@ class WebGLWorld {
                 planeObject.lightning.shininessConstant = 200;
             }
 		}
+
+        if (event.keyCode == 'W'.charCodeAt()) cubePosition[2] -= cubeSpeed;
+        else if (event.keyCode == 'S'.charCodeAt()) cubePosition[2] += cubeSpeed;
+
+        if (event.keyCode == 'A'.charCodeAt()) cubePosition[0] -= cubeSpeed;
+        else if (event.keyCode == 'D'.charCodeAt()) cubePosition[0] += cubeSpeed;
+        
+        if (event.keyCode === 39) cameraPosition[0] += cameraSpeed;  //key arrow right
+         else if (event.keyCode === 37) cameraPosition[0] -= cameraSpeed; //key arrow left
     }, false);
+  
   
     function render() {
         world.render();
+
+        cubeObject.transform.position = lerpVec3(cubeObject.transform.position, cubePosition, moveRatio);
+        world.lightning.position = lerpVec3(world.lightning.position, cubePosition, moveRatio);
+        world.camera.position = lerpVec3(world.camera.position, cameraPosition, moveRatio);
 
   
         requestAnimationFrame(render);
